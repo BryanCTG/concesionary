@@ -1,7 +1,7 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
-    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -57,7 +57,6 @@ h2 {
 }
 /* Navegacion principal */
 .navegacion-principal {
-
     text-align: center;
     width: 100%;
     display: flex;
@@ -69,11 +68,16 @@ h2 {
 .link{
     margin: 0 80px;
 }
+
 .contenedor-link{
     list-style: none;
     display: flex;
 }
+ .contenedor-link--principal li a:hover{
+    background-color: #1a2e4f;
+    color: #FFFFFF;
 
+} 
 /* Hero */
 .hero{
     position: relative;
@@ -214,7 +218,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #2F4F7F;
+    background-color: #1a2e4f;
 }
 
 /* Media queries para responsividad */
@@ -349,4 +353,218 @@ button[type="submit"]:hover {
     .footer-section {
         padding: 0 2rem;
     }
+}
+
+/* Estilos para la página del vehículo */
+.vehiculo-hero {
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.vehiculo-hero h1 {
+    color: #2F4F7F;
+    margin-bottom: 1.5rem;
+    font-size:4rem;
+    text-transform: uppercase;
+}
+
+.vehiculo-hero img {
+
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.vehiculo__nombre-gtr {
+    color: #2F4F7F;
+    margin-bottom: 1.5rem;
+    font-size:4rem;
+    text-transform: uppercase;
+}
+
+.vehiculo-hero-rx7 {
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+.vehiculo__nombre-rx7 {
+    color: #2F4F7F;
+    margin-bottom: 1.5rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-transform: uppercase;
+}
+.vehiculo__imagen-rx7 {
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+/* Especificaciones */
+.especificaciones {
+    margin: 3rem 1.5rem;
+    padding: 1.5rem;
+    background-color: #f5f5f5;
+    border-radius: 1rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.specs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.spec-grupo {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.spec-grupo h3 {
+    color: #2F4F7F;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #2F4F7F;
+    padding-bottom: 0.5rem;
+}
+
+.spec-grupo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.spec-grupo ul li {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+/* Galería de imágenes - Updated */
+.galeria {
+    margin: 4rem auto;
+    padding: 0 2rem;
+    overflow-x: auto;
+}
+
+.galeria h2 {
+    color: #2F4F7F;
+    margin-bottom: 3rem;
+}
+
+.galeria-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-bottom: 1rem;
+}
+
+.galeria-grid img {
+    width: 300px;
+    height: 200px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    transition: transform 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments for gallery */
+@media (max-width: 768px) {
+    .galeria {
+        padding: 0 1rem;
+    }
+    
+    .galeria-grid img {
+        width: 250px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-grid img {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .specs-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .vehiculo-hero {
+        margin: 1.5rem auto;
+    }
+    
+    .specs-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vehiculo-hero {
+        margin: 1rem auto;
+    }
+    
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .galeria-grid img {
+        height: 180px;
+    }
+    
+    .spec-grupo {
+        padding: 1rem;
+    }
+    
+    .especificaciones {
+        margin: 2rem 1rem;
+        padding: 1rem;
+    }
+}
+
+/* Fix navigation for mobile */
+@media (max-width: 768px) {
+    .navegacion-principal {
+        margin: 2rem auto;
+    }
+    
+    .contenedor-link {
+        padding: 1rem;
+    }
+    
+    .link {
+        padding: 1rem 0;
+    }
+}
+.boton-contacto {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #2F4F7F;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.boton-contacto:hover {
+    background-color: #1a2e4f;
 }
