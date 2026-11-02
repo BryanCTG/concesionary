@@ -1,106 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="stylesheet" href="estilos/normalize.css">
-    <link rel="stylesheet" href="/estilos/styles.css">
-    <title>Mazda RX-7</title>
+    <title>Mazda RX-7 FD | Import Dynasty CTG</title>
+    <meta name="description" content="Mazda RX-7 FD: rotativo 13B-REW twin-turbo secuencial, tracción trasera. Importado por Import Dynasty CTG.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/dynasty.css">
 </head>
 <body>
-    <header>
-        <nav class="navegacion-principal">
-            <ul class="contenedor-link">
-                <li><a class="link" href="index.html">Home</a></li>
-                <li><a class="link" href="index.html#catalogo">Catalogo</a></li>
-                <li><a class="link" href="index.html#nosotros">About us</a></li>
-                <li><a class="link" href="index.html#contacto">Contact</a></li>
+    <header class="site-header">
+        <nav class="nav wrap" aria-label="Principal">
+            <a class="brand" href="index.html">Import <span>Dynasty</span></a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+            <ul class="nav-links">
+                <li><a href="index.html#catalogo">Catálogo</a></li>
+                <li><a href="index.html#proceso">Importación</a></li>
+                <li><a href="index.html#nosotros">Nosotros</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="contenedor">
-        <section class="vehiculo-hero-rx7">
-            <h1 class="vehiculo__nombre-rx7">Mazda RX-7</h1>
-            <img class="vehiculo__imagen-rx7" src="/imagenes/carros para el concesionario/MazdaRX-7/mazda rx7 front.jpg" alt="RX7 Front">
+    <main>
+        <section class="v-hero">
+            <div class="v-hero__bg"><img src="imagenes/carros%20para%20el%20concesionario/MazdaRX-7/mazda%20rx7%20front.jpg" alt="Mazda RX-7 frontal"></div>
+            <div class="wrap">
+                <a class="back-link" href="index.html#catalogo">← Volver al catálogo</a>
+                <span class="eyebrow">Rotary</span>
+                <h1>Mazda<br>RX-7 FD</h1>
+                <p>Motor rotativo biturbo, tracción trasera y un chasis ligero de culto.</p>
+                <a href="#cotizar" class="btn">Cotizar este auto</a>
+            </div>
         </section>
 
-        <section class="especificaciones">
-            <h2>Especificaciones Técnicas</h2>
-            <div class="specs-container">
-                <div class="spec-grupo">
-                    <h3>Motor</h3>
-                    <ul>
+        <div class="wrap">
+            <div class="quick">
+                <div><b>255</b><span>HP</span></div>
+                <div><b>5.2s</b><span>0-100 km/h</span></div>
+                <div><b>250</b><span>km/h máx.</span></div>
+                <div><b>RWD</b><span>1,300 kg</span></div>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="wrap">
+                <span class="eyebrow reveal">Ficha técnica</span>
+                <h2 class="section-title reveal">Especificaciones</h2>
+                <div class="specs">
+                    <div class="spec reveal"><h3>Motor</h3><ul>
                         <li>Tipo: 13B-REW Twin-Rotor</li>
                         <li>Potencia: 255 HP @ 6,500 rpm</li>
                         <li>Torque: 294 Nm @ 5,000 rpm</li>
-                        <li>Sistema: Sequential Twin-turbo</li>
-                    </ul>
-                </div>
-
-                <div class="spec-grupo">
-                    <h3>Transmisión</h3>
-                    <ul>
+                        <li>Sistema: Sequential Twin-turbo</li></ul></div>
+                    <div class="spec reveal"><h3>Transmisión</h3><ul>
                         <li>Tipo: 5 velocidades manual</li>
                         <li>Tracción: Trasera (RWD)</li>
-                        <li>Diferencial: Torsen LSD</li>
-                    </ul>
-                </div>
-
-                <div class="spec-grupo">
-                    <h3>Rendimiento</h3>
-                    <ul>
+                        <li>Diferencial: Torsen LSD</li></ul></div>
+                    <div class="spec reveal"><h3>Rendimiento</h3><ul>
                         <li>0-100 km/h: 5.2 segundos</li>
                         <li>Velocidad máxima: 250 km/h</li>
-                        <li>Peso: 1,300 kg</li>
-                    </ul>
+                        <li>Peso: 1,300 kg</li></ul></div>
                 </div>
             </div>
         </section>
 
-        <section class="galeria">
-            <h2>Más imagenes</h2>
-            <div class="galeria-grid">
-                <img src="/imagenes/carros para el concesionario/MazdaRX-7/mazda rx7 front.jpg" alt="RX7 Back">
-                <img src="/imagenes/carros para el concesionario/MazdaRX-7/mazda rx7 back.jpg" alt="RX7 Interior">
-                <img src="/imagenes/carros para el concesionario/MazdaRX-7/mazda rx7 interior.jpg" alt="RX7 Engine">
-                <img src="/imagenes/carros para el concesionario/MazdaRX-7/mazda rx7 motor.jpg" alt="RX7 Engine">
+        <section class="section proceso">
+            <div class="wrap">
+                <span class="eyebrow reveal">Galería</span>
+                <h2 class="section-title reveal">Cada ángulo</h2>
+                <div class="galeria reveal">
+                    <button type="button"><img src="imagenes/carros%20para%20el%20concesionario/MazdaRX-7/mazda%20rx7%20front.jpg" alt="RX-7 frontal" loading="lazy"></button>
+                    <button type="button"><img src="imagenes/carros%20para%20el%20concesionario/MazdaRX-7/mazda%20rx7%20back.jpg" alt="RX-7 trasera" loading="lazy"></button>
+                    <button type="button"><img src="imagenes/carros%20para%20el%20concesionario/MazdaRX-7/mazda%20rx7%20interior.jpg" alt="RX-7 interior" loading="lazy"></button>
+                    <button type="button"><img src="imagenes/carros%20para%20el%20concesionario/MazdaRX-7/mazda%20rx7%20motor.jpg" alt="RX-7 motor rotativo" loading="lazy"></button>
+                </div>
             </div>
         </section>
-         <!-- Sección de contacto -->
-         <section class="contacto">
-            <h2>¿Interesado en este vehículo?</h2>
-            <p>Contacta con nosotros para más información o para programar una prueba de manejo</p>
-            <a href="index.html#contacto" class="boton-contacto">Contactar ahora</a>
+
+        <section class="cta-band" id="cotizar">
+            <div class="wrap reveal">
+                <h2>¿Te interesa este auto?</h2>
+                <p>Contáctanos para más información, cotización de importación o para programar una prueba de manejo.</p>
+                <a href="index.html#contacto" class="btn">Contactar ahora</a>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="contenedor footer-content">
-            <div class="footer-section">
-                <h3>Import Dynasty CTG</h3>
-                <p>Pasión, potencia y legado JDM en cada kilómetro.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contacto</h3>
-                <p>📍 Dirección: Calle Principal #123</p>
-                <p>📱 Teléfono: (123) 456-7890</p>
-                <p>✉️ Email: info@ctg.com</p>
-            </div>
-            <div class="footer-section">
-                <h3>Enlaces Rápidos</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Catálogo</a></li>
-                    <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
+        <div class="wrap footer-grid">
+            <div><h3>Import Dynasty CTG</h3><p>Pasión, potencia y legado JDM en cada kilómetro.</p></div>
+            <div><h3>Explorar</h3><ul><li><a href="index.html#catalogo">Catálogo</a></li><li><a href="index.html#proceso">Importación</a></li><li><a href="index.html#nosotros">Nosotros</a></li><li><a href="index.html#contacto">Contacto</a></li></ul></div>
+            <div><h3>Modelos</h3><ul><li><a href="nissan-gtr-r-34.html">Nissan GT-R R34</a></li><li><a href="mazda-rx7.html">Mazda RX-7 FD</a></li><li><a href="lancerevo.html">Lancer Evo X</a></li></ul></div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Import Dynasty CTG. Todos los derechos reservados.</p>
-        </div>
+        <div class="wrap footer-bottom">&copy; 2025 Import Dynasty CTG. Todos los derechos reservados.</div>
     </footer>
+
+    <div class="lightbox" role="dialog" aria-label="Imagen ampliada"><img src="" alt=""></div>
+    <script src="js/main.js"></script>
 </body>
 </html>
