@@ -16,8 +16,10 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+/* 1rem = 10px: todo el sistema está medido en rem sobre esta base */
+html { font-size: 62.5%; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 90px; }
 body {
+    overflow-x: hidden;
     margin: 0;
     background: var(--bg);
     color: var(--text);
@@ -249,6 +251,99 @@ h1, h2, h3 { font-family: var(--font-display); text-transform: uppercase; letter
     .form { padding: 2.6rem; }
     .galeria button, .galeria button:nth-child(n) { grid-column: span 12; }
     .hero__stats { gap: 3rem; }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1600px) {
+    .wrap { width: min(1360px, 88%); }
+    .section { padding: 11rem 0; }
+}
+
+/* Tablets y portátiles pequeños */
+@media (min-width: 901px) and (max-width: 1100px) {
+    .nosotros, .contacto { gap: 4rem; }
+    .nav-links { gap: 2.4rem; }
+    .footer-grid { gap: 3rem; }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .wrap { width: calc(100% - 3.2rem); }
+    .section { padding: 5.5rem 0; }
+    .section-lead { margin-bottom: 3.2rem; }
+    .nav { height: 64px; }
+    .nav-links { inset: 64px 0 auto 0; }
+    .brand { font-size: 1.9rem; letter-spacing: .1em; }
+    .hero { padding: 11rem 0 5rem; }
+    .hero__text { font-size: 1.6rem; margin-bottom: 3rem; }
+    .hero__cta .btn { flex: 1 1 100%; justify-content: center; }
+    .hero__stats { margin-top: 4rem; padding-top: 2.4rem; gap: 2.4rem; }
+    .hero__stats .stat { flex: 1 1 40%; }
+    .stat strong { font-size: 3.4rem; }
+    .hero__kanji { right: -2%; top: 14%; opacity: .6; }
+    .marquee__track span { font-size: 1.7rem; }
+    .catalogo { grid-template-columns: 1fr; gap: 2.2rem; }
+    .car-card__body { padding: 2rem 2rem 2.4rem; }
+    .car-card__name { font-size: 2.4rem; }
+    .car-card__specs { gap: 1.6rem; flex-wrap: wrap; }
+    .pasos { grid-template-columns: 1fr; }
+    .paso { padding: 2.4rem 2rem; }
+    .form { padding: 2rem; }
+    .btn { padding: 1.5rem 2.4rem; }
+    .form .btn { width: 100%; justify-content: center; }
+    .v-hero { min-height: 78svh; padding: 11rem 0 6rem; }
+    .v-hero p { font-size: 1.6rem; }
+    .quick { margin-top: -3rem; }
+    .quick div { padding: 2rem 1.2rem; }
+    .quick b { font-size: 2.8rem; }
+    .specs { grid-template-columns: 1fr; }
+    .spec { padding: 2.2rem; }
+    .features { grid-template-columns: 1fr; }
+    .cta-band { padding: 6rem 0; }
+    .galeria { gap: 1rem; }
+    .lightbox { padding: 1.2rem; }
+    .footer { padding: 5rem 0 2.4rem; }
+    .footer-bottom { margin-top: 3rem; }
+}
+
+/* Celulares muy angostos */
+@media (max-width: 360px) {
+    .hero__title { font-size: 4.2rem; }
+    .brand { font-size: 1.7rem; }
+    .quick { grid-template-columns: 1fr 1fr; }
+}
+
+/* Celular en horizontal: poca altura */
+@media (max-height: 520px) and (orientation: landscape) {
+    .hero, .v-hero { min-height: auto; padding-top: 9rem; }
+    .nav-links.is-open { max-height: 70vh; overflow-y: auto; }
+}
+
+/* Pantallas táctiles: sin efectos hover pegados, objetivos de toque de 44px */
+@media (hover: none) {
+    .car-card:hover, .paso:hover { transform: none; box-shadow: none; }
+    .car-card:hover .car-card__img img, .galeria button:hover img { transform: none; }
+    .btn:hover { transform: none; box-shadow: none; }
+    .nav-links a::after { display: none; }
+}
+@media (pointer: coarse) {
+    .nav-toggle { min-width: 44px; min-height: 44px; }
+    .back-link, .footer li a { display: inline-block; padding: .6rem 0; }
+}
+
+/* Notch y barras del sistema */
+@supports (padding: max(0px)) {
+    .site-header { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+    .footer { padding-bottom: max(3rem, env(safe-area-inset-bottom)); }
+}
+
+/* Menú móvil: icono que pasa a "X" y barra de navegación con scroll si no cabe */
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+@media (max-width: 900px) {
+    .site-header:has(.nav-links.is-open) { background: rgba(10,10,12,.97); }
+    .nav-links.is-open { max-height: calc(100svh - 64px); overflow-y: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
